@@ -1,0 +1,5 @@
+server:
+  port: 9200
+feign:
+  hystrix:
+    enabled: true

@@ -1,0 +1,20 @@
+#配置eureka 的注册中心
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9000/eureka/
+# 注册服务的端口
+server:
+  port: 9001
+#配置当前服务的名称
+spring:
+  application:
+    name: core-config #配置服务名称
+  profiles:
+    active: native #设置为本地启动的方式，而不是通过git
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/share
+
