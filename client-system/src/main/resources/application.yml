@@ -1,0 +1,25 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9000/eureka/
+spring:
+  application:
+    name: client-system
+  cloud:
+    config:
+      uri: http://localhost:9001/
+      ## 数据库相关
+      refresh:
+        refreshable: none
+    profiles:
+      active: dev
+  ## 数据库相关   由于entity中设置了jpa 因此所有引用entity的模块都得配置数据库
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/knowledge
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+feign:
+  httpclient:
+    enabled: true
+
