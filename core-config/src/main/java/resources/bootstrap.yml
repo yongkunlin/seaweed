@@ -8,13 +8,14 @@ server:
   port: 9001
 #配置当前服务的名称
 spring:
-  application:
-    name: core-config #配置服务名称
-  profiles:
-    active: native #设置为本地启动的方式，而不是通过git
   cloud:
     config:
       server:
         native:
-          search-locations: classpath:/share
+          search-locations: classpath:/share/
+  application:
+    name: core-config #配置服务名称
+  profiles:
+    active: native #设置为本地启动的方式，而不是通过git
+
 

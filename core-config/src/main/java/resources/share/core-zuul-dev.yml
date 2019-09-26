@@ -1,7 +1,0 @@
-server:
-  port: 9300
-zuul:
-  routes:
-    core-client:
-      path: /core-client/**
-      serviceId: core-client
