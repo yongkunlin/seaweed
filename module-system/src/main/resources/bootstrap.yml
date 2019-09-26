@@ -25,14 +25,9 @@ spring:
       ddl-auto: update
 #Mybatis配置
 mybatis:
-  type-aliases-package: com.knowledge.entitysystem.entity
-  configuration:
-    log-impl: org.apache.ibatis.logging.log4j.Log4jImplsystemLogin
+  mapper-locations: classpath:mapper/*.xml
 
 logging:
   level:
-    root: INFO
-    org.hibernate: INFO
-    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
-    org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
-    com.springms: DEBUG
+    com.knowledge: DEBUG
+    jdbc.sqltiming: DEBUG

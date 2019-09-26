@@ -9,6 +9,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface SystemUserMapper {
 
-    @Select("select * from system_user where account = #{value}")
     SystemUser getSystemUserByAccount(String account);
 }
