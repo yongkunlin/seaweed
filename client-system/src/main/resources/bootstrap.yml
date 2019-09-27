@@ -8,12 +8,12 @@ spring:
   cloud:
     config:
       uri: http://localhost:9001/
-      ## Êı¾İ¿âÏà¹Ø
+      ## æ•°æ®åº“ç›¸å…³
       refresh:
         refreshable: none
-    profiles:
-      active: dev
-  ## Êı¾İ¿âÏà¹Ø   ÓÉÓÚentityÖĞÉèÖÃÁËjpa Òò´ËËùÓĞÒıÓÃentityµÄÄ£¿é¶¼µÃÅäÖÃÊı¾İ¿â
+  profiles:
+    active: dev
+  ## ç”±äºå¼•ç”¨äº†entity entityä¸­ä½¿ç”¨äº†jpaç”Ÿæˆè¡¨  å› æ­¤éœ€è¦æ•°æ®åº“é…ç½® å®é™…å¹¶ä¸ä¼šè®¿é—®æ•°æ®åº“
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/knowledge
     username: root

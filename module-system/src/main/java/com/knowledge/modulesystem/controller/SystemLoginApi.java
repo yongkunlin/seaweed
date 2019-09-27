@@ -16,12 +16,12 @@ import javax.validation.Valid;
 @Api(tags = "登陆管理")
 @RestController
 @RequestMapping("systemLogin")
-public class SystemLoginController extends AbstractController {
+public class SystemLoginApi extends AbstractController {
 
     @Autowired
     private SystemUserService systemUserService;
 
-    @RequestMapping("login")
+    @PostMapping("login")
     @ApiOperation(value = "登录")
     public Boolean login(@Valid @RequestBody SystemUser systemUser) {//  , @RequestParam String validataCode
         String sessionId = request.getSession().getId();

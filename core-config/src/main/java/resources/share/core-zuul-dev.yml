@@ -1,0 +1,7 @@
+server:
+  port: 9300
+zuul:
+  routes:
+    client-system:
+      path: /client-system/**
+      serviceId: client-system
