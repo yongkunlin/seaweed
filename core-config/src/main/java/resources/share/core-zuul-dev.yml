@@ -5,3 +5,6 @@ zuul:
     client-system:
       path: /client-system/**
       serviceId: client-system
+    core-intergration:
+      path: /core-intergration/**
+      serviceId: core-intergration

@@ -6,9 +6,13 @@ import com.knowledge.entitysystem.entity.SystemUser;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.Assert;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
 @Api(tags = "登陆管理")
@@ -27,4 +31,5 @@ public class SystemLoginController extends AbstractController {
         boolean flag = systemUserClient.login(systemUser);
         return flag;
     }
+
 }

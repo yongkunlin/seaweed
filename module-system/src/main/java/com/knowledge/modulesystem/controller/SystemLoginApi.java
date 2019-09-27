@@ -6,12 +6,14 @@ import com.knowledge.modulesystem.service.SystemUserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.util.Assert;
+import org.springframework.web.bind.annotation.*;
 
+import javax.imageio.ImageIO;
+import javax.servlet.ServletOutputStream;
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
+import java.awt.image.BufferedImage;
 
 @Api(tags = "登陆管理")
 @RestController
@@ -19,6 +21,7 @@ import javax.validation.Valid;
 public class SystemLoginApi extends AbstractController {
 
     @Autowired
+    @SuppressWarnings("all")
     private SystemUserService systemUserService;
 
     @PostMapping("login")
@@ -28,4 +31,6 @@ public class SystemLoginApi extends AbstractController {
         boolean flag = systemUserService.login(systemUser);
         return flag;
     }
+
+
 }
