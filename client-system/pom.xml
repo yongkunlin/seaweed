@@ -78,6 +78,13 @@
             <artifactId>feign-httpclient</artifactId>
             <version>8.18.0</version>
         </dependency>
+
+        <!-- kaptcha 验证码生成工具 -->
+        <dependency>
+            <groupId>com.github.axet</groupId>
+            <artifactId>kaptcha</artifactId>
+            <version>${kaptcha.version}</version>
+        </dependency>
     </dependencies>
 
 </project>
